@@ -6,12 +6,12 @@ import (
 )
 
 type User struct {
-	ID        uint32    `gorm:"primary_key;auto_increment" json:"id"`
+	ID        uint `gorm:"primary_key"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
 	Nickname  string    `gorm:"size:30;not null; unique" json:"nickname"`
 	Email     string    `gorm:"not null; unique" json:"email"`
-	Password  string    `gorm:"not null" json:"password"`
-	CreatedAt time.Time `gorm:"default.current_timestamp()" json:"createdAt"`
-	UpdatedAt time.Time `gorm:"default.current_timestamp()" json:"updatedAt"`
+	Password  string    `gorm:"not null" json:"-"`
 }
 
 func (u *User) BeforeSave() error {

@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb880771-e413-44c9-a8ea-4b4052597f6f" name="Default Changelist" comment="" />
+    <list default="true" id="fb880771-e413-44c9-a8ea-4b4052597f6f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/controllers/pollController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/models/answer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/models/poll.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/repository/crud/pollRepositoryCrud.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/repository/pollRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/router/routes/pollRoutes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/repository/crud/userRepositoryCrud.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/repository/crud/userRepositoryCrud.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/router/routes/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/router/routes/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auto/data.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/auto/data.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auto/load.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/auto/load.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +32,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/github.com/jinzhu/gorm" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GoLibraries">
@@ -29,7 +44,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1RbbZk75N6KCFEmvrCpettYocqt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -40,7 +57,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

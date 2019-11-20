@@ -14,7 +14,6 @@ type userRepositoryCrud struct {
 	db *gorm.DB
 }
 
-// this part needs to be explained :/
 func NewUserRepositoryCrud(db *gorm.DB) *userRepositoryCrud {
 	return &userRepositoryCrud{db}
 }
@@ -127,23 +126,38 @@ func (r *userRepositoryCrud) Login(email string, password string) (models.User, 
 	done := make(chan bool)
 	go func(ch chan<- bool) {
 		defer close(ch)
-		value, err := security.Hash(password)
+
 		if err != nil {
 			ch <- false
 			return
 		}
-		err = r.db.Debug().Model(&models.User{}).Where("email = ? AND password = ?", email, string(value)).Take(&user).Error
+		err = r.db.Debug().Model(&models.User{}).Where("email = ?", email).Take(&user).Error
 		if err != nil {
 			ch <- false
 			return
 		}
+		err = security.VerifyPassword(user.Password, password)
+
+		if err != nil {
+			err = errors.New("Wrong Email or Password!")
+			ch <- false
+			return
+		}
+
 		ch <- true
 	}(done)
+
 	if channels.OK(done) {
 		return user, nil
 	}
+
 	if gorm.IsRecordNotFoundError(err) {
 		return user, errors.New("User not found")
 	}
+
+	if err != nil {
+		return models.User{}, err
+	}
+
 	return user, err
 }
